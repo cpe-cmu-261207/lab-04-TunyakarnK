@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,13 +8,44 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src='script.js' defer></script>
 	<title>Lab 04</title>
-	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-	<h1>Minimal Todo List</h1>
-	<input  type='text'>
-	<button>+</button>
-</body>
+<body style="background-color: #b9c9d8;">
 
+    <!--Head-->
+  <div style="color: #2e3438;background-color:white;padding:30px 80px; margin-bottom: 15px;">
+    <p style="text-align: center;font-family: 'Poppins', sans-serif; font-size: 35px;" >My Minimal To Do List</p>
+    <p style="font-size: 20px; text-align: center;">Let's Do It !!!</p>
+    <div class="flex justify-center">
+    </div>
+  </div>
+  
+
+	<!-- main -->	
+	<div class="p-1 bg-white max-w-screen-sm mx-auto my-auto rounded-lg" >
+		
+		<!-- Input -->
+		<div class="flex justify-center" style="margin: 40px; ">
+			<input class="border-2  border-gray-400 " style="width: 350px;" type='text' id="TaskInput" onkeypress="PressEnter(event)" placeholder="What's your plan?" >
+			<button class=" margin-left: 10px;" style="background-color: #b9c9d8;" onclick="AddInput()" >&nbsp;&nbsp;+&nbsp;&nbsp;</button>
+
+		</div>
+		<!-- Tasks list -->
+		<div class="rounded-lg" style="background-color: lightblue ;">
+		<div class="flex justify-center "  >
+			<h6 class="text-lg "style="margin: 10px; font-family: 'Poppins', sans-serif; color: #2e3438;">My To Do list(s):</h6>
+		</div>
+		
+		<div id="TaskBox" class=" text-lg rounded max-w-md mx-auto"> </div>	
+		<div class="flex justify-center" style="margin-top: 10px;">
+			<div id="CompletedBox" class="text-lg rounded max-w-md mx-auto p-1" style="font-family: 'Poppins', sans-serif;" >
+				<h6 style="margin: 10px; font-size: large; color: #2e3438;"  >Completed list(s)</h6> 
+		</div>
+		</div>	
+		
+	</div>
+</div>
+</body>
 </html>
